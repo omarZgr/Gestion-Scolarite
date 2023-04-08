@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.cells.editors.base.JFXTreeTableCell?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.start02.interfaceEnsController">
+   <children>
+      <AnchorPane prefHeight="420.0" prefWidth="127.0" style="-fx-background-color: #5778a3;">
+         <children>
+            <Circle fx:id="circlePhoto" fill="#c7c8c9" layoutX="61.0" layoutY="55.0" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label alignment="CENTER" layoutX="16.0" layoutY="105.0" prefHeight="31.0" prefWidth="91.0" text="Welcome">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNameUser" alignment="CENTER" layoutX="6.0" layoutY="142.0" prefHeight="22.0" prefWidth="117.0" text="NomUser" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="184.0" prefHeight="200.0" prefWidth="127.0" spacing="5.0">
+               <children>
+                  <ToggleButton fx:id="btnPage1" ellipsisString="" mnemonicParsing="false" onAction="#changeMenu" prefHeight="43.0" prefWidth="115.0" style="-fx-background-color: #285384;" styleClass="btnChange" stylesheets="@interfaceEtu.css" text="Info" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ADDRESS_CARD" size="15" />
+                     </graphic>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="goTo" />
+                     </toggleGroup>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <ToggleButton fx:id="btnPage2" mnemonicParsing="false" onAction="#changeMenu" prefHeight="43.0" prefWidth="117.0" style="-fx-background-color: #285384;" styleClass="btnChange" stylesheets="@interfaceEtu.css" text="Insere" textFill="WHITE" toggleGroup="$goTo">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="STICKY_NOTE" size="15" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <ToggleButton fx:id="btnPage3" mnemonicParsing="false" onAction="#changeMenu" prefHeight="43.0" prefWidth="117.0" style="-fx-background-color: #285384;" styleClass="btnChange" stylesheets="@interfaceEtu.css" text="Page 3" textFill="WHITE" toggleGroup="$goTo">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="15" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <ToggleButton fx:id="btnPage4" mnemonicParsing="false" onAction="#changeMenu" prefHeight="43.0" prefWidth="116.0" style="-fx-background-color: #285384;" styleClass="btnChange" stylesheets="@interfaceEtu.css" text="Add" textFill="WHITE" toggleGroup="$goTo">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="EXTERNAL_LINK" size="15" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+               </children>
+            </VBox>
+            <FontAwesomeIconView glyphName="EDIT" layoutX="97.0" layoutY="96.0" onMouseClicked="#changePhoto" size="15" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="page1" layoutX="126.0" prefHeight="420.0" prefWidth="541.0" visible="false">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="86.0" prefWidth="570.0" style="-fx-background-color: #c8c8cc;">
+               <children>
+                  <Label layoutX="209.0" layoutY="9.0" prefHeight="62.0" prefWidth="385.0" text="INFORMATION ">
+                     <font>
+                        <Font name="Segoe Script Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="ADDRESS_CARD" layoutX="143.0" layoutY="60.0" size="50" wrappingWidth="15.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="86.0" prefHeight="333.0" prefWidth="596.0" style="-fx-background-color: #eaebed;">
+               <children>
+                  <Label layoutX="28.0" layoutY="56.0" prefHeight="21.0" prefWidth="75.0" text="Nom ">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputNom" editable="false" layoutX="129.0" layoutY="54.0" />
+                  <Label layoutX="303.0" layoutY="55.0" prefHeight="21.0" prefWidth="75.0" text="Prenom">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputPrenom" editable="false" layoutX="396.0" layoutY="54.0" />
+                  <Label layoutX="28.0" layoutY="110.0" prefHeight="21.0" prefWidth="101.0" text="UserName">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputUserName" editable="false" layoutX="130.0" layoutY="108.0" />
+                  <Label layoutX="303.0" layoutY="109.0" prefHeight="21.0" prefWidth="86.0" text="Password">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputPassword" editable="false" layoutX="398.0" layoutY="108.0" />
+                  <Label layoutX="29.0" layoutY="163.0" prefHeight="21.0" prefWidth="61.0" text="Gmail">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputGmail" editable="false" layoutX="130.0" layoutY="161.0" />
+                  <Label layoutX="304.0" layoutY="162.0" prefHeight="21.0" prefWidth="75.0" text="Tel">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputTel" editable="false" layoutX="397.0" layoutY="161.0" />
+                  <Label layoutX="29.0" layoutY="216.0" prefHeight="21.0" prefWidth="101.0" text="Matricule">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputMatricule" editable="false" layoutX="131.0" layoutY="214.0" />
+                  <Label layoutX="302.0" layoutY="216.0" prefHeight="21.0" prefWidth="101.0" text="Nasissence">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="outputNaissence" editable="false" layoutX="403.0" layoutY="214.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="page2" layoutX="126.0" prefHeight="420.0" prefWidth="595.0" visible="false">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="86.0" prefWidth="597.0" style="-fx-background-color: #c8c8cc;">
+               <children>
+                  <Label layoutX="234.0" layoutY="9.0" prefHeight="31.0" prefWidth="127.0" text="Note ">
+                     <font>
+                        <Font name="Segoe Script Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="STICKY_NOTE" layoutX="180.0" layoutY="60.0" size="50" wrappingWidth="15.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1.0" layoutY="86.0" prefHeight="333.0" prefWidth="597.0" style="-fx-background-color: #eaebed;">
+               <children>
+                  <TableView fx:id="tableNote" layoutX="48.0" layoutY="120.0" prefHeight="86.0" prefWidth="473.0">
+                     <columns>
+                        <TableColumn prefWidth="93.99993896484375" text="Date Debut" />
+                        <TableColumn prefWidth="93.99993896484375" text="Date Fin" />
+                        <TableColumn prefWidth="93.99993896484375" text="Prenom Prof" />
+                        <TableColumn prefWidth="93.99993896484375" text="Module" />
+                        <TableColumn prefWidth="93.99993896484375" text="Note" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="105.0" layoutY="25.0" prefHeight="21.0" prefWidth="213.0" text="Determiner semestre : ">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxSemestre" layoutX="313.0" layoutY="23.0" prefWidth="150.0" />
+                  <JFXTreeTableCell layoutX="423.0" layoutY="167.0" prefHeight="22.0" prefWidth="49.0" />
+                  <Label layoutX="101.0" layoutY="73.0" prefHeight="21.0" prefWidth="101.0" text="Appoge">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputAppogeNote" editable="false" layoutX="313.0" layoutY="71.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="page3" layoutX="126.0" prefHeight="420.0" prefWidth="603.0" visible="false">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="86.0" prefWidth="595.0" style="-fx-background-color: #EAEBED;">
+               <children>
+                  <Label layoutX="225.0" layoutY="9.0" prefHeight="31.0" prefWidth="127.0" text="Page 3">
+                     <font>
+                        <Font name="Segoe Script Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="180.0" layoutY="60.0" size="50" wrappingWidth="15.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="page4" layoutX="126.0" prefHeight="420.0" prefWidth="433.0">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="86.0" prefWidth="597.0" style="-fx-background-color: #c8c8cc;">
+               <children>
+                  <Label layoutX="199.0" layoutY="9.0" prefHeight="62.0" prefWidth="367.0" text="ALL INFORMATION">
+                     <font>
+                        <Font name="Segoe Script Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="153.0" layoutY="60.0" size="50" wrappingWidth="15.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pageAdmin" layoutY="79.0" prefHeight="344.0" prefWidth="595.0" style="-fx-background-color: #eaebed;">
+               <children>
+                  <JFXButton layoutX="78.0" layoutY="40.0" onMouseClicked="#goTolListeEtudiants" prefHeight="62.0" prefWidth="184.0" styleClass="btnAdmin" stylesheets="@interfaceEns.css" text="Liste Etudiants" textFill="WHITE">
+                     <font>
+                        <Font name="Baskerville Old Face" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="332.0" layoutY="40.0" onMouseClicked="#goTolListeProfs" prefHeight="62.0" prefWidth="184.0" styleClass="btnAdmin" stylesheets="@interfaceEns.css" text="Liste Profs" textFill="WHITE">
+                     <font>
+                        <Font name="Baskerville Old Face" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="78.0" layoutY="121.0" onMouseClicked="#goToModule" prefHeight="62.0" prefWidth="184.0" styleClass="btnAdmin" stylesheets="@interfaceEns.css" text="Modules" textFill="WHITE">
+                     <font>
+                        <Font name="Baskerville Old Face" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="332.0" layoutY="121.0" onMouseClicked="#goToFiliere" prefHeight="62.0" prefWidth="184.0" styleClass="btnAdmin" stylesheets="@interfaceEns.css" text="Filiere" textFill="WHITE">
+                     <font>
+                        <Font name="Baskerville Old Face" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="77.0" layoutY="203.0" onMouseClicked="#goToAddEtudiants" prefHeight="62.0" prefWidth="184.0" styleClass="btnAdmin" stylesheets="@interfaceEns.css" text="Add  Etudiants" textFill="WHITE">
+                     <font>
+                        <Font name="Baskerville Old Face" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="331.0" layoutY="203.0" onMouseClicked="#goToAddProfs" prefHeight="62.0" prefWidth="184.0" styleClass="btnAdmin" stylesheets="@interfaceEns.css" text="Add Profs" textFill="WHITE">
+                     <font>
+                        <Font name="Baskerville Old Face" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="listeEtudiants" layoutY="75.0" prefHeight="344.0" prefWidth="595.0" visible="false">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="225.0" text="Order by : ">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="20.0" layoutY="62.0" prefHeight="242.0" prefWidth="556.0">
+                    <columns>
+                      <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                    </columns>
+                  </TableView>
+                  <ComboBox layoutX="120.0" layoutY="15.0" prefWidth="150.0" />
+                  <Label layoutX="312.0" layoutY="17.0" prefHeight="21.0" prefWidth="225.0" text="Select by : ">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="422.0" layoutY="15.0" prefWidth="150.0" />
+                  <Button layoutX="522.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="25.0" prefWidth="54.0" text="Retout" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="addEtudiants" layoutX="1.0" layoutY="85.0" prefHeight="333.0" prefWidth="595.0" visible="false">
+               <children>
+                  <Label layoutX="22.0" layoutY="32.0" prefHeight="21.0" prefWidth="184.0" text="Methode d'ajoute :">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="radioDirectEtu" layoutX="236.0" layoutY="35.0" mnemonicParsing="false" onAction="#choisirMethodeDajouteEtudiant" selected="true" text="Direct">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="methodeEtu" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioExcelEtu" layoutX="411.0" layoutY="34.0" mnemonicParsing="false" onAction="#choisirMethodeDajouteEtudiant" text="Fichier Excel" toggleGroup="$methodeEtu" />
+                  <AnchorPane fx:id="addEtudiantsMethodeDirect" layoutY="59.0" prefHeight="179.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <TextField layoutX="118.0" layoutY="66.0" />
+                        <Label layoutX="27.0" layoutY="120.0" prefHeight="21.0" prefWidth="75.0" text="Appoge">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="118.0" layoutY="118.0" />
+                        <TextField layoutX="405.0" layoutY="64.0" />
+                        <Label layoutX="321.0" layoutY="67.0" prefHeight="21.0" prefWidth="75.0" text="Prenom">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="406.0" layoutY="117.0" />
+                        <Label layoutX="322.0" layoutY="120.0" prefHeight="21.0" prefWidth="75.0" text="Filire">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="68.0" prefHeight="21.0" prefWidth="75.0" text="Nom ">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="468.0" layoutY="191.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" text="Ajoute" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="addEtudiantsMethodeExcel" layoutX="1.0" layoutY="73.0" prefHeight="261.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <Label layoutX="21.0" layoutY="26.0" prefHeight="21.0" prefWidth="163.0" text="Select file excel : ">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="176.0" layoutY="25.0" mnemonicParsing="false" text="Selecet" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="535.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="25.0" prefWidth="54.0" text="Retout" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="listeProfs" layoutX="1.0" layoutY="85.0" prefHeight="344.0" prefWidth="595.0" visible="false">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="225.0" text="Prof">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="20.0" layoutY="56.0" prefHeight="242.0" prefWidth="556.0">
+                     <columns>
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                        <TableColumn prefWidth="92.66664123535156" text="C1" />
+                     </columns>
+                  </TableView>
+                  <ComboBox layoutX="120.0" layoutY="15.0" prefWidth="150.0" />
+                  <Label layoutX="312.0" layoutY="17.0" prefHeight="21.0" prefWidth="225.0" text="Select by : ">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="422.0" layoutY="15.0" prefWidth="150.0" />
+                  <Button layoutX="514.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="25.0" prefWidth="54.0" text="Retout" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="addProfs" layoutX="1.0" layoutY="84.0" prefHeight="333.0" prefWidth="595.0" visible="false">
+               <children>
+                  <Label layoutX="22.0" layoutY="32.0" prefHeight="21.0" prefWidth="205.0" text="Methode d'ajoute : Pro">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="radioDirectProf" layoutX="236.0" layoutY="35.0" mnemonicParsing="false" onAction="#choisirMethodeDajouteProf" selected="true" text="Direct">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="methode" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioExcelProf" layoutX="411.0" layoutY="34.0" mnemonicParsing="false" onAction="#choisirMethodeDajouteProf" text="Fichier Excel" toggleGroup="$methode" />
+                  <AnchorPane fx:id="addEnsMethodeDirect" layoutX="1.0" layoutY="67.0" prefHeight="200.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <TextField layoutX="118.0" layoutY="66.0" />
+                        <Label layoutX="27.0" layoutY="120.0" prefHeight="21.0" prefWidth="91.0" text="Matricule">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="118.0" layoutY="118.0" />
+                        <TextField layoutX="405.0" layoutY="64.0" />
+                        <Label layoutX="321.0" layoutY="67.0" prefHeight="21.0" prefWidth="75.0" text="Prenom">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="68.0" prefHeight="21.0" prefWidth="75.0" text="Nom ">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="468.0" layoutY="191.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" text="Ajoute" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="addEnsMethodeExcel" layoutX="1.0" layoutY="73.0" prefHeight="261.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <Label layoutX="21.0" layoutY="26.0" prefHeight="21.0" prefWidth="163.0" text="Select file excel : ">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="176.0" layoutY="25.0" mnemonicParsing="false" text="Selecet" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="512.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="25.0" prefWidth="54.0" text="Retout" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="listeModule" layoutX="1.0" layoutY="83.0" prefHeight="333.0" prefWidth="595.0" visible="false">
+               <children>
+                  <Label layoutX="22.0" layoutY="32.0" prefHeight="21.0" prefWidth="205.0" text="Liste Module">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="529.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="25.0" prefWidth="54.0" text="Retout" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="listeFilire" layoutX="-1.0" layoutY="85.0" prefHeight="333.0" prefWidth="595.0" visible="false">
+               <children>
+                  <Label layoutX="22.0" layoutY="32.0" prefHeight="21.0" prefWidth="205.0" text="Liste Filiere">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="addEtudiantsMethodeDirect111" layoutY="73.0" prefHeight="261.0" prefWidth="595.0" visible="false">
+                     <children>
+                        <TextField layoutX="118.0" layoutY="66.0" />
+                        <Label layoutX="27.0" layoutY="120.0" prefHeight="21.0" prefWidth="75.0" text="Appoge">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="118.0" layoutY="118.0" />
+                        <TextField layoutX="405.0" layoutY="64.0" />
+                        <Label layoutX="321.0" layoutY="67.0" prefHeight="21.0" prefWidth="75.0" text="Prenom">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="406.0" layoutY="117.0" />
+                        <Label layoutX="322.0" layoutY="120.0" prefHeight="21.0" prefWidth="75.0" text="Filire">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="68.0" prefHeight="21.0" prefWidth="75.0" text="Nom ">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="468.0" layoutY="191.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="86.0" text="Ajoute" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="523.0" layoutY="301.0" mnemonicParsing="false" onMouseClicked="#retour" prefHeight="25.0" prefWidth="54.0" text="Retout" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

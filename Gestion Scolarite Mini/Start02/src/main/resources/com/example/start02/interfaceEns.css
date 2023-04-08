@@ -1,0 +1,21 @@
+.btnAdmin
+{
+-fx-background-color :  #8ea6be ;
+-fx-font-family: "Baskerville Old Face";
+ -fx-text-fill: white;
+
+
+
+}
+
+.btnAdmin:hover
+ {
+
+      -fx-font-weight : bold ;
+      -fx-text-fill: white;
+      -fx-font-family: "Berlin Sans FB Demi";
+       -fx-font-size: 15px;
+
+
+
+ }

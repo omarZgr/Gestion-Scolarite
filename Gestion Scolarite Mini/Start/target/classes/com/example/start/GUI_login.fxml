@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="381.0" prefWidth="566.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.start.LoginController">
+   <children>
+      <AnchorPane fx:id="loginEtudiant" prefHeight="381.0" prefWidth="566.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="381.0" prefWidth="283.0">
+               <children>
+                  <FontAwesomeIconView fill="#000000d9" glyphName="UNIVERSITY" layoutX="52.0" layoutY="224.0" selectionFill="#ac2222" size="170" wrappingWidth="186.6666564941404" />
+                  <Label layoutX="58.0" layoutY="257.0" text="Name of University" textFill="#000000d9">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="282.0" layoutY="1.0" prefHeight="381.0" prefWidth="283.0" style="-fx-background-color: #E3E4E6;">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="125.0" prefHeight="219.0" prefWidth="262.0">
+                     <children>
+                        <Label layoutX="13.0" layoutY="34.0" prefHeight="29.0" prefWidth="66.0" text="Appoge">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="80.0" prefHeight="29.0" prefWidth="86.0" text="UserName">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="123.0" prefHeight="29.0" prefWidth="86.0" text="Password">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputAppogeEtu" layoutX="102.0" layoutY="36.0" />
+                        <TextField fx:id="inputUserNameEtu" layoutX="102.0" layoutY="82.0" />
+                        <PasswordField fx:id="inputPasswordEtu" layoutX="102.0" layoutY="125.0" />
+                        <Button layoutX="100.0" layoutY="177.0" mnemonicParsing="false" onMouseClicked="#submitEtu" prefHeight="29.0" prefWidth="66.0" styleClass="btn" stylesheets="@login.css" text="Submit">
+                           <font>
+                              <Font name="Book Antiqua" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="178.0" layoutY="177.0" mnemonicParsing="false" onMouseClicked="#resetEtu" prefHeight="29.0" prefWidth="66.0" styleClass="btn" stylesheets="@login.css" text="Reset">
+                           <font>
+                              <Font name="Book Antiqua" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="wrongMsgEtu" layoutX="102.0" layoutY="154.0" prefHeight="17.0" prefWidth="149.0" textFill="#e91515" visible="false">
+                           <font>
+                              <Font name="Arial" size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <FontAwesomeIconView fill="#020202" glyphName="USERS" layoutX="117.0" layoutY="113.0" selectionFill="#ac2222" size="80" wrappingWidth="65.99999999999977" />
+                  <FontAwesomeIconView fill="#000000d9" glyphName="MAIL_FORWARD" layoutX="111.0" layoutY="362.0" />
+                  <Label layoutX="125.0" layoutY="347.0" onMouseClicked="#goToEnseignement" styleClass="goToEnseignement" stylesheets="@login.css" text="Go to enseignement" textFill="#000000d9" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginEnseignement" layoutY="-1.0" prefHeight="381.0" prefWidth="566.0">
+         <children>
+            <AnchorPane prefHeight="381.0" prefWidth="283.0" style="-fx-background-color: #E3E4E6;">
+               <children>
+                  <AnchorPane layoutX="11.0" layoutY="115.0" prefHeight="234.0" prefWidth="262.0">
+                     <children>
+                        <Label layoutX="13.0" layoutY="9.0" prefHeight="29.0" prefWidth="72.0" text="Matricule">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="55.0" prefHeight="29.0" prefWidth="86.0" text="UserName">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="96.0" prefHeight="29.0" prefWidth="86.0" text="Password">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="inputMatriculeEns" layoutX="102.0" layoutY="11.0" />
+                        <TextField fx:id="inputUserNameEns" layoutX="102.0" layoutY="57.0" />
+                        <PasswordField fx:id="inputPasswordEns" layoutX="102.0" layoutY="99.0" />
+                        <Button layoutX="100.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#submitEns" prefHeight="29.0" prefWidth="66.0" styleClass="btn" stylesheets="@login.css" text="Submit">
+                           <font>
+                              <Font name="Book Antiqua" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="178.0" layoutY="191.0" mnemonicParsing="false" onMouseClicked="#resetEns" prefHeight="29.0" prefWidth="66.0" styleClass="btn" stylesheets="@login.css" text="Reset">
+                           <font>
+                              <Font name="Book Antiqua" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label layoutX="13.0" layoutY="135.0" prefHeight="29.0" prefWidth="86.0" text="Admin ">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="checkAdminPourEns" layoutX="102.0" layoutY="143.0" mnemonicParsing="false" />
+                     </children>
+                  </AnchorPane>
+                  <FontAwesomeIconView fill="#020202" glyphName="USER_CIRCLE" layoutX="116.0" layoutY="94.0" selectionFill="#ac2222" size="80" wrappingWidth="65.99999999999977" />
+                  <FontAwesomeIconView fill="#000000d9" glyphName="MAIL_FORWARD" layoutX="111.0" layoutY="364.0" />
+                  <Label layoutX="125.0" layoutY="350.0" onMouseClicked="#goToEleve" styleClass="goToEnseignement" stylesheets="@login.css" text="Go to eleve" textFill="#000000d9" />
+                  <Label fx:id="wrongMsgEns" layoutX="112.0" layoutY="282.0" prefHeight="17.0" prefWidth="149.0" text="Wrong Msg" textFill="#e91515" visible="false">
+                     <font>
+                        <Font name="Arial" size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="283.0" prefHeight="381.0" prefWidth="283.0">
+               <children>
+                  <FontAwesomeIconView fill="#000000d9" glyphName="UNIVERSITY" layoutX="52.0" layoutY="224.0" selectionFill="#ac2222" size="170" wrappingWidth="186.6666564941404" />
+                  <Label layoutX="58.0" layoutY="257.0" text="Name of University" textFill="#000000d9">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

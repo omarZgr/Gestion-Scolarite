@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.cells.editors.base.JFXTreeTableCell?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="695.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.start02.interfaceEtuController">
+   <children>
+      <AnchorPane prefHeight="420.0" prefWidth="127.0" style="-fx-background-color: #5778a3;">
+         <children>
+            <Circle fx:id="circlePhoto" fill="#eaebed" layoutX="61.0" layoutY="55.0" radius="43.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label alignment="CENTER" layoutX="16.0" layoutY="105.0" prefHeight="31.0" prefWidth="91.0" text="Welcome">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNameUser" alignment="CENTER" layoutX="6.0" layoutY="142.0" prefHeight="22.0" prefWidth="117.0" text="NomUser" textFill="WHITE">
+               <font>
+                  <Font name="Bookman Old Style Bold" size="14.0" />
+               </font>
+            </Label>
+            <VBox alignment="TOP_CENTER" layoutX="-2.0" layoutY="184.0" prefHeight="200.0" prefWidth="127.0" spacing="5.0">
+               <children>
+                  <ToggleButton fx:id="btnPage1" ellipsisString="" mnemonicParsing="false" onAction="#changeMenu" prefHeight="43.0" prefWidth="115.0" style="-fx-background-color: #285384;" styleClass="btnChange" stylesheets="@interfaceEtu.css" text="Info" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="ADDRESS_CARD" size="15" />
+                     </graphic>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="goTo" />
+                     </toggleGroup>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <ToggleButton fx:id="btnPage2" mnemonicParsing="false" onAction="#changeMenu" prefHeight="43.0" prefWidth="117.0" style="-fx-background-color: #285384;" styleClass="btnChange" stylesheets="@interfaceEtu.css" text="NOTE" textFill="WHITE" toggleGroup="$goTo">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="STICKY_NOTE" size="15" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <ToggleButton fx:id="btnPage3" mnemonicParsing="false" onAction="#changeMenu" prefHeight="43.0" prefWidth="117.0" style="-fx-background-color: #285384;" styleClass="btnChange" stylesheets="@interfaceEtu.css" text="Page 3" textFill="WHITE" toggleGroup="$goTo">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="15" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+                  <ToggleButton fx:id="btnPage4" mnemonicParsing="false" onAction="#changeMenu" prefHeight="43.0" prefWidth="116.0" style="-fx-background-color: #285384;" styleClass="btnChange" stylesheets="@interfaceEtu.css" text="Page 4" textFill="WHITE" toggleGroup="$goTo">
+                     <font>
+                        <Font name="Tahoma" size="13.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="15" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ToggleButton>
+               </children>
+            </VBox>
+            <FontAwesomeIconView glyphName="EDIT" layoutX="97.0" layoutY="96.0" onMouseClicked="#changePhoto" size="15" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="page1" layoutX="126.0" prefHeight="420.0" prefWidth="541.0">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="86.0" prefWidth="570.0" style="-fx-background-color: #c8c8cc;">
+               <children>
+                  <Label layoutX="209.0" layoutY="9.0" prefHeight="62.0" prefWidth="353.0" text="INFORMATION ">
+                     <font>
+                        <Font name="Segoe Script Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="ADDRESS_CARD" layoutX="143.0" layoutY="60.0" size="50" wrappingWidth="15.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="86.0" prefHeight="333.0" prefWidth="571.0" style="-fx-background-color: #eaebed;">
+               <children>
+                  <Label layoutX="28.0" layoutY="32.0" prefHeight="21.0" prefWidth="75.0" text="Nom ">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputNom" editable="false" layoutX="129.0" layoutY="30.0" />
+                  <Label layoutX="303.0" layoutY="31.0" prefHeight="21.0" prefWidth="75.0" text="Prenom">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputPrenom" editable="false" layoutX="396.0" layoutY="30.0" />
+                  <Label layoutX="28.0" layoutY="86.0" prefHeight="21.0" prefWidth="101.0" text="UserName">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputUserName" editable="false" layoutX="130.0" layoutY="84.0" />
+                  <Label layoutX="303.0" layoutY="85.0" prefHeight="21.0" prefWidth="86.0" text="Password">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputPassword" editable="false" layoutX="398.0" layoutY="84.0" />
+                  <Label layoutX="29.0" layoutY="139.0" prefHeight="21.0" prefWidth="61.0" text="Gmail">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputGmail" editable="false" layoutX="130.0" layoutY="137.0" />
+                  <Label layoutX="304.0" layoutY="138.0" prefHeight="21.0" prefWidth="75.0" text="Tel">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputTel" editable="false" layoutX="397.0" layoutY="137.0" />
+                  <Label layoutX="29.0" layoutY="192.0" prefHeight="21.0" prefWidth="101.0" text="Appoge">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputAppoge" editable="false" layoutX="131.0" layoutY="190.0" />
+                  <Label layoutX="29.0" layoutY="240.0" prefHeight="21.0" prefWidth="101.0" text="Nasissence">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="outputNaissence" editable="false" layoutX="131.0" layoutY="238.0" />
+                  <Label layoutX="304.0" layoutY="191.0" prefHeight="21.0" prefWidth="75.0" text="Filiere">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputFiliere" editable="false" layoutX="397.0" layoutY="190.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="page2" layoutX="126.0" prefHeight="420.0" prefWidth="570.0" visible="false">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="86.0" prefWidth="570.0" style="-fx-background-color: #c8c8cc;">
+               <children>
+                  <Label layoutX="234.0" layoutY="9.0" prefHeight="31.0" prefWidth="127.0" text="Note ">
+                     <font>
+                        <Font name="Segoe Script Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="STICKY_NOTE" layoutX="179.0" layoutY="60.0" size="50" wrappingWidth="15.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1.0" layoutY="86.0" prefHeight="333.0" prefWidth="570.0" style="-fx-background-color: #eaebed;">
+               <children>
+                  <TableView fx:id="tableNote" layoutX="48.0" layoutY="120.0" prefHeight="86.0" prefWidth="473.0">
+                    <columns>
+                        <TableColumn prefWidth="93.99993896484375" text="Date Debut" />
+                        <TableColumn prefWidth="93.99993896484375" text="Date Fin" />
+                        <TableColumn prefWidth="93.99993896484375" text="Prenom Prof" />
+                        <TableColumn prefWidth="93.99993896484375" text="Module" />
+                        <TableColumn prefWidth="93.99993896484375" text="Note" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="105.0" layoutY="25.0" prefHeight="21.0" prefWidth="213.0" text="Determiner semestre : ">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxSemestre" layoutX="313.0" layoutY="23.0" onAction="#afficherNote" prefWidth="150.0" />
+                  <JFXTreeTableCell layoutX="423.0" layoutY="167.0" prefHeight="22.0" prefWidth="49.0" />
+                  <Label layoutX="101.0" layoutY="73.0" prefHeight="21.0" prefWidth="101.0" text="Appoge">
+                     <font>
+                        <Font name="Bookman Old Style" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="outputAppogeNote" editable="false" layoutX="313.0" layoutY="71.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="page3" layoutX="126.0" prefHeight="420.0" prefWidth="541.0" visible="false">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="86.0" prefWidth="540.0" style="-fx-background-color: #EAEBED;">
+               <children>
+                  <Label layoutX="225.0" layoutY="9.0" prefHeight="31.0" prefWidth="127.0" text="Page 3">
+                     <font>
+                        <Font name="Segoe Script Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="180.0" layoutY="60.0" size="50" wrappingWidth="15.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="page4" layoutX="126.0" prefHeight="420.0" prefWidth="541.0" visible="false">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="86.0" prefWidth="540.0" style="-fx-background-color: #EAEBED;">
+               <children>
+                  <Label layoutX="225.0" layoutY="9.0" prefHeight="31.0" prefWidth="127.0" text="Page 4">
+                     <font>
+                        <Font name="Segoe Script Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="180.0" layoutY="60.0" size="50" wrappingWidth="15.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

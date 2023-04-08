@@ -1,0 +1,23 @@
+.btn
+{
+
+     -fx-background-color :  #c7c8c9 ;
+
+}
+
+.btn:hover
+ {
+       -fx-font-weight : bold ;
+      -fx-text-fill: white;
+      -fx-background-color : #7c8288 ;
+
+ }
+
+ .goToEnseignement:hover
+ {
+ -fx-underline : true ;
+ -fx-font-size : 13px ;
+  -fx-text-fill: white;
+   -fx-background-color : #7c8288 ;
+   -fx-cursor : hand ;
+ }
